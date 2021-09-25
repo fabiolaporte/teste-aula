@@ -1,6 +1,9 @@
 version: '3'
 services:
     web:
-        image: 'httpd:2.4'
+        build: ./Dockerbuild
+        image: fabioflask
         ports:
-            - '8082:80'
+            - '8082:5000'
+        volumes:
+            - ./app:/code
